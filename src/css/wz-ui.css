@@ -1,0 +1,183 @@
+@charset 'utf-8';
+/*
+ * @Date: 2020-04-12 15:56:23
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 16:53:15
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\reset.less
+ * @Description: 
+ */
+/* 去掉所有元素的内外边距 */
+@import '//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css';
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+img,
+ul,
+li,
+form,
+label,
+input,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+dl,
+dt,
+dd,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+/* 统一全局字体 */
+body {
+  font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+}
+/* 列表元素去掉默认的列表样式表 */
+ol,
+ul {
+  list-style: none;
+}
+/* table元素的边框折叠 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 去掉默认的下划线 */
+a {
+  text-decoration: none;
+}
+/* 去掉input自带的边缘效果和背景颜色 */
+input {
+  outline: none;
+  background: none;
+}
+/*
+ * @Date: 2020-04-12 15:56:15
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:17:59
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\common.less
+ * @Description: 存放项目里的公共样式；如控制布局的，或者用的比较多的公共样式
+ */
+/*
+  区分屏幕宽度的方式：
+    1、把宽度划分为几个区间，在每个区间里对需要适配的元素指定一个大小。（本项目采用这种方式）
+    2、根据屏幕宽度按比例计算元素的大小。
+ */
+/* 屏幕宽度在340px至410px的样式（也是默认样式，以iPhone6/7/8屏幕的375px作为基准，向两边浮动35px就是这个基准区间） */
+html {
+  font-size: 20px;
+}
+/* body默认样式 */
+body {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+/* 页面蒙版 */
+.wz-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+}
+/* 屏幕宽度小于340px时的样式 */
+@media (max-width: 340px) {
+  html {
+    font-size: 18px;
+  }
+}
+/* 屏幕宽度大于410px时的样式 */
+@media (min-width: 410px) {
+  html {
+    font-size: 22px;
+  }
+}
+/* 字体图标，依赖font-awesome */
+.fa {
+  display: inline-block;
+  text-align: center;
+}
+/* 标题栏样式 */
+/*
+ * @Date: 2020-04-12 17:52:20
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:04:22
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\header.less
+ * @Description: 标题栏布局
+ */
+/* 头部导航条 */
+.wz-header {
+  position: fixed;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 640px;
+  height: 2.3rem;
+  top: 0;
+  z-index: 200;
+  border-bottom: 1px solid #ddd;
+}
+/* 内容区样式 */
+/*
+ * @Date: 2020-04-12 17:51:54
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:11:03
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\content.less
+ * @Description: 内容区域布局
+ */
+.wz-content {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow-y: auto;
+}
+/* 使用兄弟选择器，设置当有标题栏时，才设置上内边距 */
+.wz-header ~ .wz-content {
+  padding-top: 2.3rem;
+}
+/* 使用兄弟选择器，设置当有导航栏时，才设置下内边距 */
+.wz-navbar ~ .wz-content {
+  padding-bottom: 2.5rem;
+}
+/* 导航条样式 */
+/*
+ * @Date: 2020-04-12 17:52:43
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:05:48
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\navbar.less
+ * @Description: 导航条布局
+ */
+/* 底部导航栏 */
+.wz-navbar {
+  position: fixed;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  max-width: 640px;
+  height: 2.5rem;
+  border-top: 1px solid #ddd;
+  z-index: 200;
+}

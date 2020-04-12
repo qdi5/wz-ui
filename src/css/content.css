@@ -1,0 +1,22 @@
+/*
+ * @Date: 2020-04-12 17:51:54
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:11:03
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\content.less
+ * @Description: 内容区域布局
+ */
+.wz-content {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow-y: auto;
+}
+/* 使用兄弟选择器，设置当有标题栏时，才设置上内边距 */
+.wz-header ~ .wz-content {
+  padding-top: 2.3rem;
+}
+/* 使用兄弟选择器，设置当有导航栏时，才设置下内边距 */
+.wz-navbar ~ .wz-content {
+  padding-bottom: 2.5rem;
+}

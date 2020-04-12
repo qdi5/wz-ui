@@ -1,0 +1,52 @@
+/*
+ * @Date: 2020-04-12 15:56:15
+ * @LastEditors: wuzhe
+ * @LastEditTime: 2020-04-12 18:17:59
+ * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\common.less
+ * @Description: 存放项目里的公共样式；如控制布局的，或者用的比较多的公共样式
+ */
+
+ /*
+  区分屏幕宽度的方式：
+    1、把宽度划分为几个区间，在每个区间里对需要适配的元素指定一个大小。（本项目采用这种方式）
+    2、根据屏幕宽度按比例计算元素的大小。
+ */
+
+ /* 屏幕宽度在340px至410px的样式（也是默认样式，以iPhone6/7/8屏幕的375px作为基准，向两边浮动35px就是这个基准区间） */
+html {
+  font-size: 20px;
+}
+
+/* body默认样式 */
+body {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 页面蒙版 */
+.wz-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 300;
+}
+
+ /* 屏幕宽度小于340px时的样式 */
+ @media (max-width: 340px) {
+   html {
+     font-size: 18px;
+   }
+ }
+
+ /* 屏幕宽度大于410px时的样式 */
+ @media (min-width: 410px) {
+  html {
+    font-size: 22px;
+  }
+ }
