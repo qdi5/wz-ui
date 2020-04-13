@@ -6,15 +6,35 @@
  * @Description: 标题栏布局
  */
 /* 头部导航条 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .wz-header {
+  display: flex;
   position: fixed;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   max-width: 640px;
   height: 2.3rem;
+  line-height: 2.3rem;
+  text-align: center;
   top: 0;
   z-index: 200;
   border-bottom: 1px solid #ddd;
+}
+.wz-header .left {
+  flex-basis: 3rem;
+  flex-shrink: 0;
+}
+.wz-header .title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wz-header .right {
+  flex-basis: 3rem;
+  flex-shrink: 0;
 }

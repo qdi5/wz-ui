@@ -125,17 +125,37 @@ body {
  * @Description: 标题栏布局
  */
 /* 头部导航条 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .wz-header {
+  display: flex;
   position: fixed;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   max-width: 640px;
   height: 2.3rem;
+  line-height: 2.3rem;
+  text-align: center;
   top: 0;
   z-index: 200;
   border-bottom: 1px solid #ddd;
+}
+.wz-header .left {
+  flex-basis: 3rem;
+  flex-shrink: 0;
+}
+.wz-header .title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wz-header .right {
+  flex-basis: 3rem;
+  flex-shrink: 0;
 }
 /* 内容区样式 */
 /*
@@ -146,9 +166,7 @@ body {
  * @Description: 内容区域布局
  */
 .wz-content {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   overflow-y: auto;
 }
@@ -170,14 +188,30 @@ body {
  */
 /* 底部导航栏 */
 .wz-navbar {
+  display: flex;
   position: fixed;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   bottom: 0;
   width: 100%;
   max-width: 640px;
   height: 2.5rem;
   border-top: 1px solid #ddd;
   z-index: 200;
+  background: #f8f8f8;
+  text-align: center;
+}
+.wz-navbar > .navbar-item {
+  flex: 1;
+  color: #808080;
+}
+.wz-navbar > .navbar-item.active {
+  color: #09BB07;
+}
+.wz-navbar > .navbar-item .icon {
+  padding: 0.3rem 0 0.1rem;
+  font-size: 1.1rem;
+}
+.wz-navbar > .navbar-item .name {
+  display: block;
+  font-size: 0.5rem;
 }
