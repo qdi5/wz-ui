@@ -9,7 +9,30 @@
   box-sizing: border-box;
   position: relative;
   overflow-y: auto;
-  
+  .wz-panel-title {
+    height: 1.8rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+    color: #aaa;
+    background: #fff;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .wz-panel-body {
+    // 当内容去里有需要绝对定位的元素的话，以wz-panel-body为基准
+    position: relative;
+    margin-bottom: .6rem;
+    padding: .6rem 1rem;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    &.no-padding {
+      padding: 0;
+    }
+  }
+
 }
 
 /* 使用兄弟选择器，设置当有标题栏时，才设置上内边距 */

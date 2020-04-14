@@ -26,7 +26,6 @@ ul,
 li,
 form,
 label,
-input,
 table,
 tbody,
 tfoot,
@@ -170,6 +169,28 @@ body {
   position: relative;
   overflow-y: auto;
 }
+.wz-content .wz-panel-title {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  padding-left: 1rem;
+  color: #aaa;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  font-weight: normal;
+}
+.wz-content .wz-panel-body {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.wz-content .wz-panel-body.no-padding {
+  padding: 0;
+}
 /* 使用兄弟选择器，设置当有标题栏时，才设置上内边距 */
 .wz-header ~ .wz-content {
   padding-top: 2.3rem;
@@ -214,4 +235,102 @@ body {
 .wz-navbar > .navbar-item .name {
   display: block;
   font-size: 0.5rem;
+}
+/* 表单样式 */
+.wz-form .wz-form-item {
+  display: flex;
+  position: relative;
+  padding-left: 1rem;
+  /*
+        input这个元素比较特殊，它会去继承父元素的字体样式，
+        但是会被浏览器给的默认样式覆盖，这些默认样式的优先级
+        要高于继承来的样式。所以我们在设置input元素的字体样式时，
+        需要直接给inpu设置样式，而不要依靠样式的继承。
+        */
+  /* 自定义单选 */
+  /* 自定义多选 */
+}
+.wz-form .wz-form-item:not(:last-child) {
+  border-bottom: 1px solid #666;
+}
+.wz-form .wz-form-item .wz-form-label {
+  flex-basis: 3.5rem;
+  font-size: 0.8rem;
+  color: #666;
+  height: 2rem;
+  line-height: 2rem;
+}
+.wz-form .wz-form-item .wz-form-body {
+  flex: 1;
+}
+.wz-form .wz-form-item .wz-form-body .wz-input-reset,
+.wz-form .wz-form-item .wz-form-body .wz-input-warning {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  top: 0;
+  right: 1rem;
+  bottom: 0;
+  margin: auto 0;
+  font-size: 0.6rem;
+  border-radius: 50%;
+}
+.wz-form .wz-form-item .wz-form-body .wz-input-reset {
+  color: #fff;
+  background: #aaa;
+}
+.wz-form .wz-form-item .wz-form-body .wz-input-warning {
+  color: red;
+  background: #fff;
+  border: 1px solid red;
+}
+.wz-form .wz-form-item .wz-input {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 0.8rem;
+  border: none;
+}
+.wz-form .wz-form-item > .wz-radio {
+  flex: 1;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+.wz-form .wz-form-item > .wz-radio > .wz-radio-icon {
+  margin-right: 0.5rem;
+  color: #09bb07;
+  visibility: hidden;
+}
+.wz-form .wz-form-item > .wz-radio.checked > .wz-radio-icon {
+  visibility: visible;
+}
+.wz-form .wz-form-item > .wz-radio .wz-radio-input {
+  position: absolute;
+  left: -999rem;
+}
+.wz-form .wz-form-item > .wz-check {
+  flex: 1;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+.wz-form .wz-form-item > .wz-check > .wz-check-icon {
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0.6rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.wz-form .wz-form-item > .wz-check.checked > .wz-check-icon {
+  background: #09bb07;
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0);
+}
+.wz-form .wz-form-item > .wz-check > .wz-check-input {
+  position: absolute;
+  left: -999rem;
 }

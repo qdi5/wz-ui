@@ -6,11 +6,31 @@
  * @Description: 内容区域布局
  */
 .wz-content {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   overflow-y: auto;
+}
+.wz-content .wz-panel-title {
+  height: 1.8rem;
+  line-height: 1.8rem;
+  padding-left: 1rem;
+  color: #aaa;
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  font-weight: normal;
+}
+.wz-content .wz-panel-body {
+  position: relative;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.wz-content .wz-panel-body.no-padding {
+  padding: 0;
 }
 /* 使用兄弟选择器，设置当有标题栏时，才设置上内边距 */
 .wz-header ~ .wz-content {
