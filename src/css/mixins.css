@@ -1,6 +1,7 @@
 /* 当行文本溢出 */
 .ellipsis {
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
