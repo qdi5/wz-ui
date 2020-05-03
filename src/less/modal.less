@@ -1,0 +1,62 @@
+.wz-modal {
+    display: none;        
+    &.show {
+        display: block;
+    }
+    .wz-modal-wrap {
+        position: fixed;
+        width: 75%;
+        // 防止在大屏幕下模态框过大；所以采用了页面内容区最大宽度640px
+        // 的75%作为窗口的最大宽度。
+        max-width: 480px;
+        left: 0;
+        top: 45%;
+        transform: translate3d(0, -50%, 0);
+        right: 0;
+        margin: auto;
+        border-radius: .4rem;
+        background-color: #fff;
+        z-index: 301;
+    }
+    .wz-modal-body {
+        padding: 1.8rem .8rem 1.5rem;
+        text-align: center;
+        font-size: .8rem;
+        line-height: 1.2rem;
+        overflow: hidden;
+        &.no-padding {
+            padding: 0;
+        }
+        .wz-modal-img {
+           display: block;
+           width: 100%;
+           border-radius: .3rem;
+        }
+    }
+    .wz-modal-footer {
+        display: flex;
+        border-top: 1px solid #ddd;
+        .wz-btn {
+            border: none;
+            border-radius: none;
+            font-size: .8rem;
+            & + .wz-btn {
+                border-left: 1px solid #ddd;
+            }
+        }
+    }
+    .wz-modal-close {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 1.3rem;
+        line-height: 1.3rem;
+        margin: auto;
+        bottom: -3rem;
+        font-size: .8rem;
+        font-weight: 100;
+        color: #eee;
+        border: 1px solid #eee;
+        border-radius: 50%;
+    }
+}

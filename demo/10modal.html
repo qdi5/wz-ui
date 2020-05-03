@@ -1,0 +1,75 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../src/css/wz-ui.css">
+   <title>模态框组件</title>
+ </head>
+ <body>
+   <div class="wz-header">
+     <div class="left">
+       <i class="fa fa-chevron-left"></i>
+     </div>
+     <div class="title">WZ-UI模态框</div>
+     <div class="right">
+       <i class="fa fa-ellipsis-h"></i>
+     </div>
+   </div>
+   <div class="wz-navbar">
+     <a class="navbar-item">
+       <i class="fa fa-home icon"></i>
+       <span class="name">首页</span>
+     </a>
+     <a class="navbar-item">
+       <i class="fa fa-list icon"></i>
+       <span class="name">分类</span>
+     </a>
+     <a class="navbar-item">
+       <i class="fa fa-search icon"></i>
+       <span class="name">发现</span>
+     </a>
+     <a class="navbar-item">
+       <i class="fa fa-user-o icon"></i>
+       <span class="name">我的</span>
+     </a>
+   </div>
+   <div class="wz-content">
+     <p>内容区</p>     
+   </div>
+   <div class="wz-modal show hide">
+     <div class="wz-mask"></div>  
+     <div class="wz-modal-wrap">
+       <div class="wz-modal-body">
+         <p>您的会员即将到期，请及时续费，以免影响您的权益。</p>
+       </div>
+       <div class="wz-modal-footer">
+         <a class="wz-btn">下次再说</a>
+         <a class="wz-btn">立即续费</a>
+      </div>
+     </div>
+   </div>
+   <div class="wz-modal show hide">
+    <div class="wz-mask"></div>  
+    <div class="wz-modal-wrap">
+      <div class="wz-modal-body">
+        <p>您的会员即将到期，请及时续费，以免影响您的权益。</p>
+      </div>
+      <div class="wz-modal-footer">
+        <a class="wz-btn">我知道了</a>
+     </div>
+    </div>
+  </div>
+  <!-- 海报样式模态框 -->
+  <div class="wz-modal show">
+    <div class="wz-mask"></div>
+    <div class="wz-modal-wrap">
+      <div class="wz-modal-body no-padding">
+        <img class="wz-modal-img" src="../src/imgs/qrcode.jpeg" alt="">
+      </div>
+      <i class="fa fa-close wz-modal-close"></i>
+    </div>
+  </div>
+ </body>
+ </html>

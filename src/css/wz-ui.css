@@ -2979,3 +2979,64 @@ body {
 .wz-menu .wz-menu-item .wz-switch:checked::after {
   left: 1.2rem;
 }
+/* 模态框组件样式 */
+.wz-modal {
+  display: none;
+}
+.wz-modal.show {
+  display: block;
+}
+.wz-modal .wz-modal-wrap {
+  position: fixed;
+  width: 75%;
+  max-width: 480px;
+  left: 0;
+  top: 45%;
+  transform: translate3d(0, -50%, 0);
+  right: 0;
+  margin: auto;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  z-index: 301;
+}
+.wz-modal .wz-modal-body {
+  padding: 1.8rem 0.8rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+}
+.wz-modal .wz-modal-body.no-padding {
+  padding: 0;
+}
+.wz-modal .wz-modal-body .wz-modal-img {
+  display: block;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+.wz-modal .wz-modal-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+.wz-modal .wz-modal-footer .wz-btn {
+  border: none;
+  border-radius: none;
+  font-size: 0.8rem;
+}
+.wz-modal .wz-modal-footer .wz-btn + .wz-btn {
+  border-left: 1px solid #ddd;
+}
+.wz-modal .wz-modal-close {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1.3rem;
+  line-height: 1.3rem;
+  margin: auto;
+  bottom: -3rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  color: #eee;
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
