@@ -2665,6 +2665,10 @@ body {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+.del-default-input {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .wz-btn {
   display: block;
   position: relative;
@@ -2913,4 +2917,65 @@ body {
 }
 .wz-grid.wz-grid-5 .wz-grid-item:nth-child(5) {
   border-right: none;
+}
+/* 菜单组件样式 */
+.wz-menu .wz-menu-item {
+  display: flex;
+  height: 2.3rem;
+  padding: 0 1rem;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-size: 0.8rem;
+}
+.wz-menu .wz-menu-item .wz-menu-name {
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+}
+.wz-menu .wz-menu-item .wz-menu-value {
+  max-width: 2rem;
+  height: 1rem;
+  line-height: 1rem;
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.wz-menu .wz-menu-item > .wz-menu-icon {
+  margin-left: 0.3rem;
+  color: #999;
+}
+.wz-menu .wz-menu-item .wz-switch {
+  position: relative;
+  box-sizing: content-box;
+  width: 2.6rem;
+  height: 1.4rem;
+  border: 1px solid #ccc;
+  outline: 0;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, border 0.3s;
+}
+.wz-menu .wz-menu-item .wz-switch::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  box-shadow: 0 0 2px #999;
+  transition: left 0.3s;
+}
+.wz-menu .wz-menu-item .wz-switch:checked {
+  border-color: #07c160;
+  background-color: #07c160;
+}
+.wz-menu .wz-menu-item .wz-switch:checked::after {
+  left: 1.2rem;
 }

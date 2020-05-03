@@ -1,0 +1,66 @@
+@import './mixins/mixins.less';
+.wz-menu {
+    .wz-menu-item {
+        display: flex;
+        height: 2.3rem;
+        padding: 0 1rem;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        font-size: .8rem;
+        .wz-menu-name {
+            flex: 1;
+            .ellipsis;
+            color: #333;
+        }
+        .wz-menu-value {
+            max-width: 2rem;
+            height: 1rem;
+            line-height: 1rem;
+            color: #999;
+            .ellipsis;
+        }
+        & > .wz-menu-icon {
+            margin-left: .3rem;
+            color: #999;
+        }
+        .wz-switch {
+            position: relative;
+            // checkbox类型的input元素在有些浏览器里默认是怪异盒模型
+            // 所以这里统一指定成标准盒模型，以便计算圆形按钮的大小和位置
+            box-sizing: content-box;
+            width: 2.6rem;
+            height: 1.4rem;
+            border: 1px solid #ccc;
+            outline: 0;
+            border-radius: .75rem;
+            background-color: rgba(0,0,0,0.1);
+            .del-default-input;
+            transition: background-color .3s,
+                        border .3s;
+            // 按钮的样式
+            &::after {
+                content: " ";
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 1.4rem;
+                height: 1.4rem;
+                border-radius: .7rem;
+                background-color: #fff;
+                // 替代border来区分元素的边界，让边界有一种立体的效果。
+                // 计算宽度和高度的时候也变得简单了，不用考虑border带来的影响。
+                box-shadow: 0 0 2px #999;
+                transition: left .3s;
+            }
+            // 选中状态下，改变开关边框和背景色
+            &:checked {
+                border-color: #07c160;
+                background-color: #07c160;
+                // 选中状态下，更改圆形按钮的位置
+                &::after {
+                    left: 1.2rem;
+                }
+            }
+        }
+    }
+}
