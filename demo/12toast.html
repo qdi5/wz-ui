@@ -1,0 +1,61 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../src/css/wz-ui.css">
+   <title>Toast提示组件</title>
+ </head>
+ <body>
+   <div class="wz-content">
+     <h1 class="wz-panel-title">Toast</h1>
+     <div class="wz-panel-body">
+         <a class="wz-btn btn-primary" id="js-show-toast-loading">
+           加载中提示
+         </a>
+         <br/>
+         <a class="wz-btn btn-primary" id="js-show-toast-success">
+           成功提示
+         </a>    
+     </div>
+   </div>
+   <div class="wz-toast" id="js-toast-loading">
+     <i class="fa fa-spinner fa-spin wz-toast-icon"></i>
+     <p class="wz-toast-info">操作进行中</p>
+   </div>
+   <div class="wz-toast" hidden id="js-toast-success">
+     <i class="fa fa-check wz-toast-icon"></i>
+     <div class="wz-toast-info">操作成功</div>
+   </div>
+   <script>
+     const loadingBtn = document.getElementById('js-show-toast-loading')
+     const successBtn = document.getElementById('js-show-toast-success')
+     const jsToastLoading = document.getElementById('js-toast-loading')
+     const jsToastSuccess = document.getElementById('js-toast-success')
+     loadingBtn.addEventListener('click', function() {
+      let classList = jsToastLoading.classList
+      //if (!classList.contains('show')) {
+      classList.add('show')
+      setTimeout(function() {
+        classList.remove('show')
+      }, 2000)
+      /*} else {
+        classList.remove('show')
+      }*/
+     }, false)
+
+     successBtn.addEventListener('click', function() {
+      let classList = jsToastSuccess.classList
+      // if (!classList.contains('show')) {
+        classList.add('show')
+        setTimeout(function() {
+          classList.remove('show')
+        }, 2000)
+      /* } else {
+        classList.remove('show')
+      } */
+     }, false)
+   </script>
+ </body>
+ </html>

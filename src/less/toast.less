@@ -1,0 +1,33 @@
+.wz-toast {
+    position: fixed;
+    top: 45%;
+    // 初始状态下，偏下
+    transform: translate3d(0, -40%, 0);
+    left: 0;
+    right: 0;
+    width: 7rem;
+    margin: auto;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);          
+    opacity: 0;
+    border-radius: .4rem;
+    color: #fff;
+    transition: transform .3s,
+                opacity .3s;
+    z-index: 301;
+    .wz-toast-icon {
+        font-size: 2.2rem;
+    }
+    .wz-toast-info {
+        margin-top: .5rem;
+        font-size: .7rem;
+    }
+    // 显示的时候，通过过渡缓慢移动到上方；
+    // 透明度也是从0缓慢过渡到1
+    &.show {
+        opacity: 1;
+        display: block!important;
+        transform: translate3d(0, -50%, 0);
+    }
+}

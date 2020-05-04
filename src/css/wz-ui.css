@@ -3115,3 +3115,33 @@ body {
 .wz-loading-inline .wz-loading-info .wz-loading-icon {
   color: rgba(0, 0, 0, 0.2);
 }
+/* Toast弹出提示组件 */
+.wz-toast {
+  position: fixed;
+  top: 45%;
+  transform: translate3d(0, -40%, 0);
+  left: 0;
+  right: 0;
+  width: 7rem;
+  margin: auto;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  border-radius: 0.4rem;
+  color: #fff;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 301;
+}
+.wz-toast .wz-toast-icon {
+  font-size: 2.2rem;
+}
+.wz-toast .wz-toast-info {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+.wz-toast.show {
+  opacity: 1;
+  display: block!important;
+  transform: translate3d(0, -50%, 0);
+}
