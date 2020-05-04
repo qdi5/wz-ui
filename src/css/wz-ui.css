@@ -2427,6 +2427,22 @@ body {
   display: inline-block;
   text-align: center;
 }
+/* 垂直方向上振动 */
+.fa-vibrate-y {
+  animation: fa-vibrate-y 1.5s infinite ease-in;
+}
+/* 振动轨迹 */
+@keyframes fa-vibrate-y {
+  0% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
 /* 标题栏样式 */
 /*
  * @Date: 2020-04-12 17:52:20
@@ -3039,4 +3055,63 @@ body {
   color: #eee;
   border: 1px solid #eee;
   border-radius: 50%;
+}
+/* 加载提示组件 */
+.wz-loading {
+  text-align: center;
+}
+.wz-loading .wz-loading-icon {
+  font-size: 4.5rem;
+  color: rgba(0, 0, 0, 0.05);
+}
+.wz-loading .wz-loading-info {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+/* diy实现 单行加载提示组件
+.wz-loading-inline {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid red;
+    text-align: center;
+    font-size: 0;
+    .wz-loading-info {
+        position: relative;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        display: inline-block;
+        padding: 0 .3rem;
+        font-size: .8rem;
+        background-color: green;
+    }
+}
+*/
+.wz-loading-inline {
+  box-sizing: border-box;
+  width: 12.5rem;
+  height: 1rem;
+  position: relative;
+  margin: 1.5rem auto 1rem;
+  text-align: center;
+  color: #999;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0;
+}
+.wz-loading-inline .wz-loading-info {
+  display: inline-block;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.5rem;
+  position: relative;
+  margin-top: 0.025rem;
+  top: -0.5rem;
+  font-size: 0.7rem;
+  background-color: #fff;
+}
+.wz-loading-inline .wz-loading-info .wz-loading-icon {
+  color: rgba(0, 0, 0, 0.2);
 }
