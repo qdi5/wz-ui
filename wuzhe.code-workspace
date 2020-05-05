@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../workspace/woku/woku_wx"
+		},
+		{
+			"name": "wz-ui",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wz-ui"
+	}
+}

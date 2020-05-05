@@ -29,4 +29,10 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 ```
+## 踩坑之路
+1. 使用多行文本截断的less样式，由于编译less的autoprefixer设置不正确，下面这行代码没有正确编译到最终的css文件里：
+```css
+  -webkit-box-orient: vertical;
+```  
+导致`text-align: center`不起作用；将autoprefixer的设置项改为`cover: 99.5%`后，最终编译出来的css文件，就有了`-webkit-box-orient: vertical`,多行文本截断以及文本水平居中也生效了。
 

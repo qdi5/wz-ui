@@ -1,0 +1,37 @@
+@import './mixins/mixins.less';
+.wz-action-sheet {
+    .wz-action-sheet-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 640px;
+        transition: transform .3s;
+        text-align: center;
+        z-index: 301;
+        .wz-action-sheet-header {
+            h1 {
+                font-weight: normal;
+                font-size: 1rem;
+                color: #666;
+                border-bottom: 1px solid red;
+            }
+        }
+        .wz-action-sheet-body {
+            display: flex;
+            text-align: center;
+            color: #999;
+            height: 3rem;
+            & > .wz-action-sheet-menu {
+                flex: 1;
+                height: 1rem;
+                line-height: 1rem;
+                text-align: center;
+                .multiline-ellipsis;
+                border-bottom: 1px solid red;
+                
+            }
+        }
+    }
+}

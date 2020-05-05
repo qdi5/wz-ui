@@ -1,0 +1,71 @@
+/* 当行文本溢出 */
+.ellipsis {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.hide,
+[hidden] {
+  display: none!important;
+}
+.visibal {
+  visibility: visible;
+}
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.del-default-input {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.wz-action-sheet .wz-action-sheet-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 640px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -moz-transition: transform 0.3s, -moz-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s;
+  text-align: center;
+  z-index: 301;
+}
+.wz-action-sheet .wz-action-sheet-wrap .wz-action-sheet-header h1 {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #666;
+  border-bottom: 1px solid red;
+}
+.wz-action-sheet .wz-action-sheet-wrap .wz-action-sheet-body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  color: #999;
+  height: 3rem;
+}
+.wz-action-sheet .wz-action-sheet-wrap .wz-action-sheet-body > .wz-action-sheet-menu {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  border-bottom: 1px solid red;
+}

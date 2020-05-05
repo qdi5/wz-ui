@@ -1,0 +1,57 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../src/css/wz-ui.css">
+   <title>ActionSheet弹出式菜单</title>
+ </head>
+ <body>
+   <div class="wz-content">
+     <h1 class="wz-panel-title">ActionSheet</h1>
+     <div class="wz-panel-body">
+         <a class="wz-btn" id="js-show">显示弹出式菜单</a> 
+     </div>
+   </div>
+   <div class="wz-action-sheet">
+     <div class="wz-mask"></div>
+     <div class="wz-action-sheet-wrap">
+       <div class="wz-action-sheet-header">
+         <h1 class="wz-action-sheet-title">你需要做什么操作？</h1>
+       </div>
+       <div class="wz-action-sheet-body">
+         <a class="wz-action-sheet-menu">
+          <i class="fa fa-heart-o favorite"></i> 收藏
+         </a>
+         <a class="wz-action-sheet-menu">
+          <i class="fa fa-star-o"></i> 关注
+         </a>
+         <a class="wz-action-sheet-menu">
+          <i class="fa fa-share-alt"></i> 分享给好友
+        </a>
+       </div>
+       <div class="wz-action-sheet-footer">
+         <a class="wz-action-sheet-menu" id="js-close">
+           取消
+         </a>
+       </div>
+     </div>
+   </div>
+   <script>
+     window.onload = function () {
+      const actionSheet = document.querySelector('.wz-action-sheet')
+      document.querySelector('#js-show').onclick = function () {
+        console.log('显示啦')
+        actionSheet.classList.add('show')
+      }
+
+      document.querySelector('#js-close').onclick = function () {
+        console.log('隐藏啦')
+        actionSheet.classList.remove('show')
+      }
+     }
+     
+   </script>
+ </body>
+ </html>
