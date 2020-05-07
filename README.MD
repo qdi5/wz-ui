@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-04-18 12:19:43
  * @LastEditors: wuzhe
- * @LastEditTime: 2020-04-21 00:17:03
+ * @LastEditTime: 2020-05-08 00:45:51
  * @FilePath: c:\workspace\repository-everyday\wz-ui\README.MD
  * @Description: 
  -->
@@ -34,5 +34,11 @@
 ```css
   -webkit-box-orient: vertical;
 ```  
-导致`text-align: center`不起作用；将autoprefixer的设置项改为`cover: 99.5%`后，最终编译出来的css文件，就有了`-webkit-box-orient: vertical`,多行文本截断以及文本水平居中也生效了。
+导致`text-align: center`不起作用；将autoprefixer的设置项改为`cover: 99.5%`后，最终编译出来的css文件，就有了`-webkit-box-orient: vertical`,多行文本截断以及文本水平居中也生效了。   
+
+## 发布代码到npm  
+- 发布代码到npm之前，需要在项目根目录执行npm init -y；配置项目的基本信息，版本号，项目依赖；
+- npm adduser；第一次发布包需要添加用户；输入用户名和密码；登陆成功；
+- npm login；登陆npm
+- npm publish；发布代码到npm仓库
 

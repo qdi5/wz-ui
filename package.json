@@ -1,0 +1,31 @@
+{
+  "name": "wuzhe-ui",
+  "version": "1.0.3",
+  "description": "diy a h5 mobile ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qdi5/wz-ui.git"
+  },
+  "keywords": [
+    "h5",
+    "mobile",
+    "ui"
+  ],
+  "author": "wuzhe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qdi5/wz-ui/issues"
+  },
+  "homepage": "https://github.com/qdi5/wz-ui#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
