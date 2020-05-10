@@ -1,0 +1,18 @@
+.page-list {
+  .sort-wrap {
+    display: flex;
+    .sort-btn {
+      flex: 1;
+      border-radius: 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+      background: #fff;
+      & ~ .sort-btn {
+        border-left: 1px solid #ddd;
+      }
+      &.active {
+        color: #09bb07;
+      }
+    }
+  }
+}

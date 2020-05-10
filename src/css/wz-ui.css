@@ -249,7 +249,7 @@ body {
 /*
  * @Date: 2020-04-12 17:51:54
  * @LastEditors: wuzhe
- * @LastEditTime: 2020-04-12 18:11:03
+ * @LastEditTime: 2020-05-10 21:46:36
  * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\content.less
  * @Description: 内容区域布局
  */
@@ -269,6 +269,11 @@ body {
   border-top: 1px solid #eee;
   font-size: 14px;
   font-weight: normal;
+}
+.wz-content .wz-panel-link {
+  float: right;
+  margin-right: 1rem;
+  color: #aaa;
 }
 .wz-content .wz-panel-body {
   position: relative;
@@ -538,6 +543,7 @@ body {
 /* 搜索样式 */
 /* 使用on-focus类区分输入状态 */
 .wz-search {
+  width: 100%;
   max-width: 640px;
   margin: 0 auto;
   background: #f8f8f8;
@@ -549,6 +555,7 @@ body {
   top: 0;
   bottom: 0;
   overflow-y: auto;
+  z-index: 300;
   /* 对取消按钮的控制 */
 }
 .wz-search.on-focus > .wz-search-form > .wz-search-cancel {
@@ -744,7 +751,7 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  border-top: 1px solid yellow;
+  border-top: 1px solid #ddd;
 }
 .wz-grid.no-border {
   border: none;
@@ -773,8 +780,8 @@ body {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid red;
-  border-right: 1px solid green;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   text-align: center;
   background: #fff;
 }
@@ -796,9 +803,9 @@ body {
      -moz-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  border-right: 1px solid green;
+  border-right: 1px solid #ddd;
 }
-.wz-grid.wz-grid-2 .wz-grid-item:nth-child(2) {
+.wz-grid.wz-grid-2 .wz-grid-item:nth-child(2n) {
   border-right: none;
 }
 .wz-grid.wz-grid-4 .wz-grid-item {
@@ -807,9 +814,9 @@ body {
      -moz-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
-  border-right: 1px solid green;
+  border-right: 1px solid #ddd;
 }
-.wz-grid.wz-grid-4 .wz-grid-item:nth-child(4) {
+.wz-grid.wz-grid-4 .wz-grid-item:nth-child(4n) {
   border-right: none;
 }
 .wz-grid.wz-grid-5 .wz-grid-item {
@@ -818,9 +825,9 @@ body {
      -moz-box-flex: 0;
       -ms-flex: 0 1 20%;
           flex: 0 1 20%;
-  border-right: 1px solid green;
+  border-right: 1px solid #ddd;
 }
-.wz-grid.wz-grid-5 .wz-grid-item:nth-child(5) {
+.wz-grid.wz-grid-5 .wz-grid-item:nth-child(5n) {
   border-right: none;
 }
 /* 菜单组件样式 */
@@ -1243,6 +1250,7 @@ body,
   margin: 0.5rem 0 1rem;
 }
 .wz-article .wz-article-img {
+  display: block;
   max-width: 100%;
   margin: auto;
 }

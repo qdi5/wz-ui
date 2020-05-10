@@ -1,0 +1,30 @@
+.page-index .wz-grid-item:nth-child(1) .wz-grid-icon {
+  color: #f93c32;
+}
+.page-index .wz-grid-item:nth-child(2) .wz-grid-icon {
+  color: #1dbdd4;
+}
+.page-index .wz-grid-item:nth-child(3) .wz-grid-icon {
+  color: #eb1d57;
+}
+.page-index .wz-grid-item:nth-child(4) .wz-grid-icon {
+  color: #00bb4b;
+}
+.page-index .wz-grid-item:nth-child(5) .wz-grid-icon {
+  color: #fd9707;
+}
+.page-index .wz-grid-item:nth-child(6) .wz-grid-icon {
+  color: #fc5024;
+}
+.page-index .wz-grid-item:nth-child(7) .wz-grid-icon {
+  color: #9a00b0;
+}
+.page-index .wz-grid-item:nth-child(8) .wz-grid-icon {
+  color: #f3443c;
+}
+.page-index .wz-grid .wz-grid-item {
+  padding: 0.5rem 0;
+}
+.page-index .yp-category {
+  margin-bottom: 0.5rem;
+}

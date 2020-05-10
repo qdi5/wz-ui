@@ -1,6 +1,6 @@
 {
   "name": "wuzhe-ui",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "diy a h5 mobile ui",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
   "keywords": [
     "h5",
     "mobile",
-    "ui"
+    "ui",
+    "wuzhe-ui",
+    "wuzhe"
   ],
   "author": "wuzhe",
   "license": "ISC",

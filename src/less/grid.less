@@ -1,7 +1,9 @@
+// 定义边框的颜色
+@border-color: #ddd;
 .wz-grid {
     display: flex;
     flex-wrap: wrap;
-    border-top: 1px solid yellow;
+    border-top: 1px solid @border-color;
     &.no-border {
         border: none;
         .wz-grid-item {
@@ -15,8 +17,8 @@
         padding: 1.2rem 0;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid red;
-        border-right: 1px solid green;
+        border-bottom: 1px solid @border-color;
+        border-right: 1px solid @border-color;
         text-align: center;
         background: #fff;
         &:nth-child(3n) {
@@ -35,8 +37,8 @@
     &.wz-grid-2 {
         .wz-grid-item {
             flex: 0 1 50%;
-            border-right: 1px solid green;
-            &:nth-child(2) {
+            border-right: 1px solid @border-color;
+            &:nth-child(2n) {
                 border-right: none;
             }
         }
@@ -45,8 +47,8 @@
     &.wz-grid-4 {
         .wz-grid-item {
             flex: 0 1 25%;
-            border-right: 1px solid green;
-            &:nth-child(4) {
+            border-right: 1px solid @border-color;
+            &:nth-child(4n) {
                 border-right: none;
             }
         }
@@ -55,8 +57,8 @@
     &.wz-grid-5 {
         .wz-grid-item {
             flex: 0 1 20%;
-            border-right: 1px solid green;
-            &:nth-child(5) {
+            border-right: 1px solid @border-color;
+            &:nth-child(5n) {
                 border-right: none;
             }
         }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list页</title>
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/wz-ui.min.css">
+  <link rel="stylesheet" href="./css/list.css">
+</head>
+<body class="page-list">
+  <div class="wz-search">
+    <form action="#" class="wz-search-form">
+      <div class="wz-search-input-wrap">
+        <i class="fa fa-search wz-search-icon"></i>
+        <input type="text" onfocus="handleFocus(this)" class="wz-search-input" placeholder="" autocomplete="off" required>
+        <i class="fa fa-close wz-search-clear"></i>
+      </div>
+      <span class="wz-search-cancel" onclick="cancel(event, this)">取消</span>
+    </form>
+    <ul class="wz-search-suggest">
+      <li class="wz-suggest-item">手机</li>
+      <li class="wz-suggest-item">iPhone XS Max</li>
+      <li class="wz-suggest-item">华为P30</li>
+      <li class="wz-suggest-item">小米MIX3</li>
+      <li class="wz-suggest-item">诺基亚1110</li>
+    </ul>
+  </div>
+  <div class="wz-navbar">
+    <div class="navbar-item">
+      <i class="fa fa-home icon"></i>
+      <span class="name">首页</span>
+    </div>
+    <div class="navbar-item">
+      <i class="fa fa-search icon"></i>
+      <span class="name">发现</span>
+    </div>
+    <div class="navbar-item active">
+      <i class="fa fa-user-o icon"></i>
+      <span class="name">我的</span>
+    </div>
+  </div>
+  <div class="wz-content">
+    <div class="sort-wrap">
+      <a class="wz-btn sort-btn active">
+        收藏次数
+        <i class="fa fa-sort-desc"></i>
+      </a>
+      <a class="wz-btn sort-btn">
+        发布时间
+        <i class="fa fa-sort"></i>
+      </a>
+    </div>
+    <div class="wz-panel-body no-padding">
+      <div class="wz-loading-inline">
+        <span class="wz-loading-info">
+          <i class="fa fa-circle-o-notch fa-spin wz-loading-icon"></i>
+          用力加载中
+        </span>
+      </div>
+      <div class="wz-list">
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+        <a href="" class="wz-list-item">
+          <div class="item-img-wrap">
+            <img src="../src/imgs/one.jpg" alt="" class="item-img">
+          </div>
+          <div class="item-content-wrap">
+            <h1 class="item-title">漂亮小姐姐图片清纯头像 高清好看女生很清纯的头像图片精选，长按头像图片可放大或保存到本地</h1>
+            <p class="item-price">&yen;998</p>
+            <p class="item-desc">已售9999张</p>
+          </div>
+        </a>
+      </div>
+      <div class="wz-loading-inline">
+        <span class="wz-loading-info">
+          上拉加载更多
+          <i class="fa fa-long-arrow-up fa-vibrate-y wz-loading-icon"></i>
+        </span>
+      </div>
+      <div class="wz-loading-inline">
+        <span class="wz-loading-info">我可是有底线的</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function handleFocus(_this) {
+      _this.parentNode.parentNode.parentNode.classList.add('on-focus')
+    }
+    function cancel(event, _this) {
+      event.stopPropagation()
+      _this.parentNode.parentNode.classList.remove('on-focus')
+    }
+  </script>
+</body>
+</html>

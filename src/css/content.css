@@ -1,12 +1,14 @@
 /*
  * @Date: 2020-04-12 17:51:54
  * @LastEditors: wuzhe
- * @LastEditTime: 2020-04-12 18:11:03
+ * @LastEditTime: 2020-05-10 21:46:36
  * @FilePath: c:\workspace\repository-everyday\wz-ui\src\less\content.less
  * @Description: 内容区域布局
  */
 .wz-content {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   overflow-y: auto;
 }
@@ -19,6 +21,11 @@
   border-top: 1px solid #eee;
   font-size: 14px;
   font-weight: normal;
+}
+.wz-content .wz-panel-link {
+  float: right;
+  margin-right: 1rem;
+  color: #aaa;
 }
 .wz-content .wz-panel-body {
   position: relative;

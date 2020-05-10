@@ -1,5 +1,6 @@
 /* 使用on-focus类区分输入状态 */
 .wz-search {
+  width: 100%;
   max-width: 640px;
   margin: 0 auto;
   background: #f8f8f8;
@@ -11,6 +12,7 @@
   top: 0;
   bottom: 0;
   overflow-y: auto;
+  z-index: 300;
   /* 对取消按钮的控制 */
 }
 .wz-search.on-focus > .wz-search-form > .wz-search-cancel {

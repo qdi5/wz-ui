@@ -1,6 +1,7 @@
 /* 使用on-focus类区分输入状态 */
 .wz-search {
   // 这个组件的容器可能会使用固定定位的情况，所以需要限制最大宽度
+  width: 100%;
   max-width: 640px;
   margin: 0 auto;
   background: #f8f8f8;
@@ -11,6 +12,7 @@
     top: 0;
     bottom: 0;
     overflow-y: auto;
+    z-index: 300;
      /* 对取消按钮的控制 */
     & > .wz-search-form > .wz-search-cancel {
       display: block;
