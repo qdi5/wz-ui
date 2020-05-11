@@ -6,6 +6,9 @@
 		{
 			"name": "wz-ui",
 			"path": "."
+		},
+		{
+			"path": "../es6plus"
 		}
 	],
 	"settings": {
