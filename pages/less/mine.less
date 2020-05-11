@@ -1,0 +1,37 @@
+.page-mine {
+  .user {
+    display: flex;
+    padding: 1rem .8rem;
+    .portrait {
+      display: block;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+    }
+    .info {
+      flex: 1;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .nick-name {
+        font-weight: normal;
+        font-size: 1.2rem;
+      }
+      .detail {
+        font-size: .7rem;
+        .detail-item {
+          color: #aaa;
+          & + .detail-item {
+            margin-left: .5rem;
+            padding-left: .5rem;
+            border-left: 1px solid #666;
+          }
+        }
+      }
+    }
+  }
+  .logout-btn {
+    border: none;
+  }
+}

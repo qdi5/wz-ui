@@ -1,0 +1,57 @@
+.page-mine .user {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0.8rem;
+}
+.page-mine .user .portrait {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+.page-mine .user .info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.page-mine .user .info .nick-name {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.page-mine .user .info .detail {
+  font-size: 0.7rem;
+}
+.page-mine .user .info .detail .detail-item {
+  color: #aaa;
+}
+.page-mine .user .info .detail .detail-item + .detail-item {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #666;
+}
+.page-mine .logout-btn {
+  border: none;
+}
